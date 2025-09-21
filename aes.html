@@ -3,39 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AES Demo — Encrypt / Decrypt</title>
+  <title>AES-GCM Demo</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="container">
-    <h1>AES-GCM Demo (Client-side)</h1>
+    <h1>AES-GCM — Encrypt & Decrypt (Web Crypto)</h1>
 
     <section class="card">
-      <label>Enter a password (used to derive AES key):
-        <input id="password" type="password" placeholder="Type a password" />
+      <label>Password (used to derive AES key)
+        <input id="password" type="password" placeholder="Enter a password" />
       </label>
 
-      <label>Plaintext to encrypt:
-        <textarea id="plaintext" rows="4" placeholder="Write text to encrypt"></textarea>
+      <label>Plaintext to encrypt
+        <textarea id="plaintext" rows="4" placeholder="Type text to encrypt"></textarea>
       </label>
 
       <div class="row">
         <button id="encryptBtn" class="btn">Encrypt</button>
         <button id="decryptBtn" class="btn alt">Decrypt</button>
-        <button id="generateBtn" class="btn alt2">Generate Random Key</button>
+        <button id="randomBtn" class="btn alt2">Generate random password</button>
       </div>
 
-      <label>Encrypted (Base64):
-        <textarea id="ciphertext" rows="4" readonly></textarea>
+      <label>Encrypted output (Base64: salt+iv+ciphertext)
+        <textarea id="ciphertext" rows="4" readonly placeholder="Encrypted output will appear here"></textarea>
       </label>
 
-      <label>Decrypted output:
-        <textarea id="decrypted" rows="4" readonly></textarea>
+      <label>Decrypted text
+        <textarea id="decrypted" rows="4" readonly placeholder="Decrypted text will appear here"></textarea>
       </label>
 
-      <p class="hint">
-        Implementation notes: uses Web Crypto API with PBKDF2 -> AES-GCM. IV is random, encoded with the ciphertext.
-      </p>
+      <p class="hint">Note: If decryption fails, the password is wrong or the data is corrupted.</p>
 
       <a href="index.html" class="btn small">← Back</a>
     </section>
