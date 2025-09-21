@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AES Demo — Encrypt / Decrypt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>AES-GCM Demo (Client-side)</h1>
+
+    <section class="card">
+      <label>Enter a password (used to derive AES key):
+        <input id="password" type="password" placeholder="Type a password" />
+      </label>
+
+      <label>Plaintext to encrypt:
+        <textarea id="plaintext" rows="4" placeholder="Write text to encrypt"></textarea>
+      </label>
+
+      <div class="row">
+        <button id="encryptBtn" class="btn">Encrypt</button>
+        <button id="decryptBtn" class="btn alt">Decrypt</button>
+        <button id="generateBtn" class="btn alt2">Generate Random Key</button>
+      </div>
+
+      <label>Encrypted (Base64):
+        <textarea id="ciphertext" rows="4" readonly></textarea>
+      </label>
+
+      <label>Decrypted output:
+        <textarea id="decrypted" rows="4" readonly></textarea>
+      </label>
+
+      <p class="hint">
+        Implementation notes: uses Web Crypto API with PBKDF2 -> AES-GCM. IV is random, encoded with the ciphertext.
+      </p>
+
+      <a href="index.html" class="btn small">← Back</a>
+    </section>
+  </main>
+
+  <script src="aes.js"></script>
+</body>
+</html>
