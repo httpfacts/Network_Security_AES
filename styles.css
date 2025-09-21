@@ -1,0 +1,19 @@
+:root{
+  --bg:#0f1724; --card:#0b1220; --text:#e6eef8; --accent:#4fb0ff;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{margin:0;background:linear-gradient(180deg,#071021 0%, #091427 100%); color:var(--text); min-height:100vh;}
+.container{max-width:820px;margin:36px auto;padding:18px;}
+.card{background:rgba(255,255,255,0.02);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+h1{margin:0 0 14px;font-size:28px}
+h2{margin:0 0 10px}
+label{display:block;margin:12px 0;font-size:14px}
+input[type="password"], textarea{width:100%;padding:10px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:var(--text);resize:vertical}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#042033;text-decoration:none;border:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent);border:1px solid rgba(79,176,255,0.18)}
+.btn.alt2{background:#1b3348;color:var(--text);border:1px solid rgba(255,255,255,0.03)}
+.btn.small{padding:6px 8px;font-size:13px}
+.hint{font-size:13px;color:rgba(230,238,248,0.75)}
+.footer{text-align:center;margin-top:18px;color:rgba(230,238,248,0.6);font-size:13px}
+code{background:rgba(255,255,255,0.02);padding:2px 6px;border-radius:4px}
