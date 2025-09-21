@@ -1,49 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Network Security — AES Demo</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AES Encryption Demo</title>
 </head>
 <body>
-  <main class="container">
-    <h1>Cryptography & Secure Communication</h1>
-    <section class="card">
-      <h2>Topic: AES (Advanced Encryption Standard)</h2>
-      <p>
-        AES is a symmetric key encryption algorithm widely used for secure data transmission.
-        It operates on fixed block sizes (128-bit block) using key sizes of 128, 192, or 256 bits.
-      </p>
-      <h3>Key points</h3>
-      <ul>
-        <li><strong>Type:</strong> Symmetric block cipher</li>
-        <li><strong>Block size:</strong> 128 bits</li>
-        <li><strong>Key sizes:</strong> 128 / 192 / 256 bits</li>
-        <li><strong>Mode used in demo:</strong> AES-GCM (authenticated encryption)</li>
-      </ul>
+  <h1>AES-GCM Encryption Demo</h1>
 
-      <h3>Why AES-GCM?</h3>
-      <p>
-        AES-GCM (Galois/Counter Mode) provides confidentiality and integrity (authentication). It's
-        recommended over older modes (like ECB) because it avoids pattern leakage and provides
-        a message authentication tag.
-      </p>
+  <label>Password: </label>
+  <input type="password" id="password"><br><br>
 
-      <h3>What you'll find in this mini-project</h3>
-      <ol>
-        <li>A live demo page that encrypts & decrypts text in the browser using AES-GCM.</li>
-        <li>Client-side JavaScript (Web Crypto API) that does: derive key from password (PBKDF2),
-        encrypt with random IV, show Base64 output.</li>
-        <li>Screenshots and code you can include in your submission.</li>
-      </ol>
+  <label>Message: </label>
+  <textarea id="message"></textarea><br><br>
 
-      <a class="btn" href="aes.html">Open AES Demo &rarr;</a>
-    </section>
+  <button onclick="encryptMessage()">Encrypt</button>
+  <button onclick="decryptMessage()">Decrypt</button>
 
-    <footer class="footer">
-      <small>Example project for Network Security assignment — put screenshots under <code>screenshots/</code></small>
-    </footer>
-  </main>
+  <h3>Encrypted:</h3>
+  <textarea id="encrypted" readonly></textarea>
+
+  <h3>Decrypted:</h3>
+  <textarea id="decrypted" readonly></textarea>
+
+  <!-- Link your JS file -->
+  <script src="aes.js"></script>
 </body>
 </html>
