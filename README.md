@@ -1,5 +1,4 @@
 # Network_Security_AES
-# Network Security — AES Demo
 
 This small project demonstrates AES-GCM encryption/decryption in the browser using the Web Crypto API.
 
