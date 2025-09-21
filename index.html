@@ -1,29 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AES Encryption Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Network Security — AES Demo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>AES-GCM Encryption Demo</h1>
+  <main class="container">
+    <h1>Network Security — AES Demo</h1>
 
-  <label>Password: </label>
-  <input type="password" id="password"><br><br>
+    <section class="card">
+      <h2>Topic: AES (Advanced Encryption Standard)</h2>
+      <p>
+        AES is a symmetric block cipher commonly used to secure data. This mini-project implements
+        client-side AES-GCM encryption and decryption using the browser <code>Web Crypto API</code>.
+      </p>
 
-  <label>Message: </label>
-  <textarea id="message"></textarea><br><br>
+      <h3>What this demo does</h3>
+      <ul>
+        <li>Derives an AES-256 key from a password using PBKDF2 (with random salt).</li>
+        <li>Encrypts text with AES-GCM using a random IV.</li>
+        <li>Packs salt + IV + ciphertext into a single Base64 string for easy sharing/storage.</li>
+      </ul>
 
-  <button onclick="encryptMessage()">Encrypt</button>
-  <button onclick="decryptMessage()">Decrypt</button>
+      <p>Click below to open the live encryption demo.</p>
+      <a class="btn" href="aes.html">Open AES Demo →</a>
+    </section>
 
-  <h3>Encrypted:</h3>
-  <textarea id="encrypted" readonly></textarea>
-
-  <h3>Decrypted:</h3>
-  <textarea id="decrypted" readonly></textarea>
-
-  <!-- Link your JS file -->
-  <script src="aes.js"></script>
+    <footer class="footer">
+      <small>Make sure you use the same password when decrypting. Salt and IV are embedded in the ciphertext string.</small>
+    </footer>
+  </main>
 </body>
 </html>
